@@ -34,18 +34,36 @@
   <url type="bugtracker">https://github.com/mike632t/x11-calc/issues</url>
   <url type="vcs-browser">https://github.com/mike632t/x11-calc</url>
 
+  <branding>
+    <color type="primary" scheme_preference="light">#729fcf</color>
+    <color type="primary" scheme_preference="dark">#204a87</color>
+  </branding>
+
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/mike632t/x11-calc/v0.12.0133/img/x11-calc-25.png</image>
+      <image>https://raw.githubusercontent.com/mike632t/x11-calc/v0.12.0134/img/x11-calc-21-mate-screenshot.png</image>
+      <caption>HP 21</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/mike632t/x11-calc/v0.12.0134/img/x11-calc-25c-mate-screenshot.png</image>
       <caption>HP 25c</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/mike632t/x11-calc/v0.12.0133/img/x11-calc-11c.png</image>
-      <caption>HP 11c</caption>
+      <image>https://raw.githubusercontent.com/mike632t/x11-calc/v0.12.0134/img/x11-calc-33c-mate-screenshot.png</image>
+      <caption>HP 33c</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/mike632t/x11-calc/v0.12.0134/img/x11-calc-15c-mate-screenshot.png</image>
+      <caption>HP 15c</caption>
     </screenshot>
   </screenshots>
 
   <releases>
+  <release version="0.12.0134" date="2024-03-10">
+    <description>
+      <p>Improve flathub layout, icon and shortcuts</p>
+    </description>
+  </release>
   <release version="0.12.0133" date="2024-03-06">
     <description>
       <p>Initial release</p>
@@ -54,3 +72,4 @@
 </releases>
 
 </component>
+

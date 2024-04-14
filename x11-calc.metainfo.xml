@@ -64,7 +64,7 @@
     <description>
       <p> Firmware support and zooming enhancements</p>
       <ul>
-          <li>Allows the application window to be increased size using <the code>--zoom [0-4]</code> command line option</li>
+          <li>Allows the application window size to be increased using <code>--zoom [0-4]</code> option</li>
           <li>Embed missing firmware (separate ROM files no longer required)</li>
       </ul>
 

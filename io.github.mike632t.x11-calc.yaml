@@ -2,34 +2,30 @@ id: io.github.mike632t.x11-calc
 runtime: org.freedesktop.Platform
 runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
-command: x11-calc.sh
+command: x11-calc
 finish-args:
 - --share=ipc
 - --socket=x11
+rename-desktop-file: x11-calc.desktop
+rename-icon: x11-calc
 
 modules:
   - name: x11-calc
-    buildsystem: simple
-    build-commands:
-      - ./make.sh all
+    buildsystem: autotools
+    no-autogen: true
+    make-install-args:
+      - prefix=/app
+      - DESKTOP=freedesktop
     post-install:
-      - install -dm755 /app/bin/
-      - install -m755 bin/* /app/bin/
-      - install -dm755 /app/share/x11-calc/prg
-      - install -m644 prg/* /app/share/x11-calc/prg
-      - install -Dm644 /app/bin/x11-calc.desktop /app/share/applications/$FLATPAK_ID.desktop
-      - rm -f /app/bin/x11-calc.desktop
-      - desktop-file-edit --set-icon=$FLATPAK_ID /app/share/applications/$FLATPAK_ID.desktop
-      - install -Dm644 src/x11-calc.svg /app/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
+      - desktop-file-edit --set-icon=$FLATPAK_ID /app/share/applications/x11-calc.desktop
       - install -Dm644 x11-calc.metainfo.xml /app/share/metainfo/$FLATPAK_ID.metainfo.xml
     sources:
       - type: git
         url: https://github.com/mike632t/x11-calc.git
-        tag: v0.12.0134
-        commit: 25f88c9af640864ddcbe83bb5bb60efe8d008f9d
+        tag: v0.14.0147
+        commit: 333c9e1c165f067b57dce0a1cafb0eda0bd7d545
         x-checker-data:
           type: git
           tag-pattern: "^v([\\d.]+)$"
-          version-scheme: semantic
       - type: file
         path: x11-calc.metainfo.xml

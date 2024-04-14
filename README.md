@@ -1,19 +1,18 @@
 # Flatpak packaging for [x11-calc](https://github.com/mike632t/x11-calc) HP RPN calculator emulator
 
-Application icon should appear in launcher after install.\
-It can also be launched under terminal (to monitor eventual error messages):\
-`flatpak run io.github.mike632t.x11-calc`
+User can launch any of the program emulators (microcode-level firmware interpreter).\
+Application icon shows-up in desktop launcher after install.\
+Right-click on icon to set default model for direct access, or launch a sample model from list.
 
-User can launch any of the project emulator.\
-Preferred calculator model name can be set right-clicking on application icon, or running in terminal:\
-`flatpak run io.github.mike632t.x11-calc --setup`\
-or similarly editing:\
+Application may be started under terminal (to monitor eventual error messages):\
+`flatpak run io.github.mike632t.x11-calc` (add `--setup` to set defaults)\
+Defaults may be edited manually from host:\
 `nano ~/.var/app/io.github.mike632t.x11-calc/config/x11-calc/x11-calc.conf`
 
-Some sample saved programs are in `/app/share/x11-calc/prg/`
-
-Voyager models (hp10c, hp11c, hp12c, hp15c, hp16c) can be used if relevant rom file is supplied at:\
-`~/.var/app/io.github.mike632t.x11-calc/data/x11-calc/x11-calc-"${MODEL#hp}".rom`
+Application is **strictly sandboxed**, so it can only process files (`*.dat`, `*.rom`) within host's:\
+`~/.var/app/io.github.mike632t.x11-calc/data/x11-calc/`\
+which `x11-calc` application can access there, or within sandboxed `/var/data/x11-calc/`.\
+Similarly some read-only sample saved programs are in sandboxed `/app/share/x11-calc/prg/`.
 
 ## Building & testing
 Install flatpak-builder.

@@ -5,7 +5,7 @@
   <id>io.github.mike632t.x11-calc</id>
 
   <name>RPN Calculator</name>
-  <summary>HP calculator emulator</summary>
+  <summary>HP calculators emulator</summary>
 
   <developer id="mike632t.wordpress.com">
   <name>mike632t</name>
@@ -15,15 +15,15 @@
   <project_license>GPL-3.0-or-later</project_license>
 
   <description>
-      <p>Available emulated models are:</p>
+      <p>Enjoy homecoming your favorite calculator model onto your desktop, with this high-fidelity microcode-level interpreter:</p>
       <ul>
-          <li>Classic serie (HP 35, HP 80, HP 45, HP 70)</li>
-          <li>2nd Generation / Woodstock serie (HP 21, HP 22, HP 25, HP 25c, HP 27, HP 29c, HP 67)</li>
-          <li>3rd Generation / Spice serie (HP 31e, HP 32e, HP 33e, HP 33c, HP 34c, HP 37e, HP 38c, HP 38e)</li>
-          <li>Voyager serie (HP 10c, HP 11c, HP 12c, HP 15c, HP 16c)</li>
+          <li>Classic serie: HP 35, HP 80, HP 45, HP 70</li>
+          <li>Woodstock serie: HP 21, HP 22, HP 25, HP 25c, HP 27, HP 29c, HP 67</li>
+          <li>Spice serie: HP 31e, HP 32e, HP 33e, HP 33c, HP 34c, HP 37e, HP 38c, HP 38e</li>
+          <li>Voyager serie: HP 10c, HP 11c, HP 12c, HP 15c, HP 16c</li>
       </ul>
-    <p>Right-click on icon to set preferred model, or run <code>flatpak run io.github.mike632t.x11-calc --setup</code></p>
-    <p>For optimal rendering, following fonts are recommanded: <code>xfonts-base</code> (Debian/Ubuntu), <code>xorg-x11-fonts-base</code> or <code>xorg-x11-fonts-misc</code> (Fedora), <code>font-misc-misc</code> (Gentoo).</p>
+    <p>Right-click on desktop icon to set default model for direct access, or start a sample model from list. Default may also be set from terminal with: <code>flatpak run io.github.mike632t.x11-calc --setup</code></p>
+    <p><em>Note</em>: for optimal rendering, following fonts are recommended: <code>xfonts-base</code> (Debian/Ubuntu), <code>xorg-x11-fonts-base</code> or <code>xorg-x11-fonts-misc</code> (Fedora), <code>font-misc-misc</code> (Gentoo).</p>
   </description>
 
   <launchable type="desktop-id">io.github.mike632t.x11-calc.desktop</launchable>
@@ -41,24 +41,34 @@
 
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/mike632t/x11-calc/v0.12.0134/img/x11-calc-21-mate-screenshot.png</image>
+      <image>https://raw.githubusercontent.com/mike632t/x11-calc/v0.14.0147/img/x11-calc-21-gnome-screenshot.png</image>
       <caption>HP 21</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/mike632t/x11-calc/v0.12.0134/img/x11-calc-25c-mate-screenshot.png</image>
+      <image>https://raw.githubusercontent.com/mike632t/x11-calc/v0.14.0147/img/x11-calc-25c-gnome-screenshot.png</image>
       <caption>HP 25c</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/mike632t/x11-calc/v0.12.0134/img/x11-calc-33c-mate-screenshot.png</image>
+      <image>https://raw.githubusercontent.com/mike632t/x11-calc/v0.14.0147/img/x11-calc-33c-gnome-screenshot.png</image>
       <caption>HP 33c</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/mike632t/x11-calc/v0.12.0134/img/x11-calc-15c-mate-screenshot.png</image>
+      <image>https://raw.githubusercontent.com/mike632t/x11-calc/v0.14.0147/img/x11-calc-15c-gnome-screenshot.png</image>
       <caption>HP 15c</caption>
     </screenshot>
   </screenshots>
 
   <releases>
+  <release version="0.14.0147" date="2024-04-14">
+    <description>
+      <p> Firmware support and zooming enhancements</p>
+      <ul>
+          <li>Embed missing firmware (separate ROM files no longer required)</li>
+          <li>Allow to increase calculator size with <code>--zoom [0-4]</code> parameter</li>
+      </ul>
+
+    </description>
+  </release>
   <release version="0.12.0134" date="2024-03-10">
     <description>
       <p>Improve flathub layout, icon and shortcuts</p>

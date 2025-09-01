@@ -15,10 +15,12 @@ which `x11-calc` application can access there, or within sandboxed `/var/data/x1
 Similarly some read-only sample saved programs are in sandboxed `/app/share/x11-calc/prg/`.
 
 ## Building & testing
-Install flatpak-builder.
-Copy / clone this repo in a directory and then run:\
+Install flatpak-builder and SDK.\
+`sudo apt-get install flatpak-builder`\
+`flatpak install flathub org.freedesktop.Sdk/x86_64/23.08`\
+Download or clone this repo in a directory and run.\
 `flatpak-builder -v --force-clean build-dir io.github.mike632t.x11-calc.yaml`\
-Test install:\
+Test install.\
 `flatpak-builder --user --install --force-clean build-dir io.github.mike632t.x11-calc.yaml`
 
 Once ready, extract side-loadable `x11-calc.flatpak` package for later distribution:\

@@ -1,6 +1,6 @@
 id: io.github.mike632t.x11-calc
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: x11-calc
 finish-args:

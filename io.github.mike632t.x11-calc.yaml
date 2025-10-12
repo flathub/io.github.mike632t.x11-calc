@@ -22,8 +22,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/mike632t/x11-calc.git
-        tag: v0.18.0188
-        commit: 22ee44018d6bd83083dbb52bcdec54edf1e26761
+        tag: v0.19.0194
+        commit: cf50d8f9f4eb8545ca39956a47951f5858eab525
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
